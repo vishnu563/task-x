@@ -52,12 +52,12 @@ function App() {
           <section className='flex flex-col'>
             <p className='text-center'>Join 4000+ companies already growing</p>
             <div className='grid grid-cols-6 items-center gap-10 m-14 object-cover '>
-              <img src={companyLogo} alt="" />
-              <img src={companyLogo1} alt="" />
-              <img src={companyLogo2} alt="" />
-              <img src={companyLogo3} alt="" />
-              <img src={companyLogo4} alt="" />
-              <img src={companyLogo5} alt="" />
+              <img src={companyLogo} alt="Company Logo" />
+              <img src={companyLogo1} alt="Company Logo" />
+              <img src={companyLogo2} alt="Company Logo" />
+              <img src={companyLogo3} alt="Company Logo" />
+              <img src={companyLogo4} alt="Company Logo" />
+              <img src={companyLogo5} alt="Company Logo" />
             </div>
             <hr />
           </section>
@@ -69,24 +69,37 @@ function App() {
             <p className=' text-center text-2xl w-5/6'>Powerful, self-serve product and growth analytics to help you convert, engage, and retain more users. Trusted by over 4000 startups.</p>
 
             </div>
-            <div className='grid grid-cols-3 items-center text-center gap-10'>
+            <div className='grid grid-cols-3 items-center text-center gap-10 m-14'>
               <div>
 
-                <h3>Share team inboxes</h3>
-                <p></p>
+                <h3 className='font-bold text-2xl'>Share team inboxes</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem quaerat unde praesentium tempora architecto eos aliquid similique nihil excepturi optio.</p>
                 </div>
               <div>
-                <h3>Deliver instant answers</h3>
+                <h3 className='font-bold text-2xl'>Deliver instant answers</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem quaerat unde praesentium tempora architecto eos aliquid similique nihil excepturi optio.</p>
                 </div>
               <div>
-                <h3>Manage your team eith reports</h3></div>
+                <h3 className='font-bold text-2xl'>Manage your team eith reports</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem quaerat unde praesentium tempora architecto eos aliquid similique nihil excepturi optio.</p>
+                </div>
               <div>
-                <h3>Connect with customers</h3></div>
+                <h3 className='font-bold text-2xl'>Connect with customers</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem quaerat unde praesentium tempora architecto eos aliquid similique nihil excepturi optio.</p>
+                </div>
               <div>
-                <h3>Connect the tool you already use</h3></div>
+                <h3 className='font-bold text-2xl'>Connect the tool you already use</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem quaerat unde praesentium tempora architecto eos aliquid similique nihil excepturi optio.</p>
+                </div>
               <div>
-                <h3>Our people make the difference</h3></div>
+                <h3 className='font-bold text-2xl'>Our people make the difference</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem quaerat unde praesentium tempora architecto eos aliquid similique nihil excepturi optio.</p>
+                </div>
             </div>
+          </section>
+
+          <section>
+
           </section>
         </header>
 
