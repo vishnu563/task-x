@@ -90,7 +90,7 @@ function App() {
               <h1 className='font-bold text-5xl'>Beautiful analytics to grow smater</h1>
               <p className=' text-center text-2xl w-4/6 text-gray-600'>Powerful, self-serve product and growth analytics to help you convert, engage, and retain more users. Trusted by over 4000 startups.</p>
               <div className='flex flex-row space-x-8'>
-              <div className='demo-btn'>
+              <div className='demo-btn rounded-full'>
               <FiPlayCircle />Demo
               </div>
               <button className='btn-primary rounded-full'>
@@ -285,92 +285,97 @@ function App() {
             </div>
           </section>
 
-          <section className='flex flex-col items-center gap-6 mt-32 mb-20'>
-            <h1>Start your free trail</h1>
-            <p>Join our 4000+ startups already growing with Untitled.</p>
-            <div className='space-x-10'>
-              <button>Learn more</button>
-              <button>Get started</button>
+          <section className='flex flex-col items-center gap-6 mt-32 mb-20  bg-gray-100 py-24'>
+            <h1 className='font-bold text-4xl'>Start your free trail</h1>
+            <p className='text-gray-600 text-lg'>Join our 4,000+ startups already growing with Untitled.</p>
+            <div className='space-x-10 flex'>
+              <button className='demo-btn rounded-lg bg-white text-gray-600'>Learn more</button>
+              <button className='btn-primary rounded-lg'>Get started</button>
             </div>
           </section>
         </header>
 
 
-        <footer className='mb-10'>
-          <section className='grid grid-cols-6 text-center mb-10'>
+        <footer className='mb-10 cursor-default'>
+          <section className='flex justify-center' >
+            <div className='grid grid-cols-6 gap-24 mb-10' >
             <div>
-              <h4>Product</h4>
-              <ul>
-                <li>Overview</li>
-                <li>Features</li>
+              <h4 className='text-gray-500 font-medium mb-4'>Product</h4>
+              <ul className='flex flex-col gap-4 text-gray-700 font-medium'>
+                <li className='hover:animate-blink'>Overview</li>
+                <li className='hover:animate-blink'>Features</li>
+                <div className='flex flex-row space-x-4 items-center hover:animate-blink'>
                 <li>Solution</li>
-                <li>Tutorials</li>
-                <li>Pricing</li>
-                <li>Releases</li>
+                <li className='border border-green-400 text-green-700 px-2 text-xs rounded-xl bg-green-100'>New</li>
+                </div>
+                <li className='hover:animate-blink'>Tutorials</li>
+                <li className='hover:animate-blink'>Pricing</li>
+                <li className='hover:animate-blink'>Releases</li>
               </ul>
             </div>
             <div>
-            <h4>Company</h4>
-              <ul>
-                <li>About us</li>
-                <li>Careers</li>
-                <li>Press</li>
-                <li>News</li>
-                <li>Media kit</li>
-                <li>Contact</li>
+            <h4 className='text-gray-500 font-medium mb-4'>Company</h4>
+              <ul className='flex flex-col gap-4 text-gray-700 font-medium'>
+                <li className='hover:animate-blink'>About us</li>
+                <li className='hover:animate-blink'>Careers</li>
+                <li className='hover:animate-blink'>Press</li>
+                <li className='hover:animate-blink'>News</li>
+                <li className='hover:animate-blink'>Media kit</li>
+                <li className='hover:animate-blink'>Contact</li>
               </ul>
             </div>
             <div>
-            <h4>Resources</h4>
-              <ul>
-                <li>Blog</li>
-                <li>Newsletter</li>
-                <li>Events</li>
-                <li>Help centre</li>
-                <li>Tutorials</li>
-                <li>Support</li>
+            <h4 className='text-gray-500 font-medium mb-4'>Resources</h4>
+              <ul className='flex flex-col gap-4 text-gray-700 font-medium'>
+                <li className='hover:animate-blink'>Blog</li>
+                <li className='hover:animate-blink'>Newsletter</li>
+                <li className='hover:animate-blink'>Events</li>
+                <li className='hover:animate-blink'>Help centre</li>
+                <li className='hover:animate-blink'>Tutorials</li>
+                <li className='hover:animate-blink'>Support</li>
               </ul>
             </div>
             <div>
-            <h4>Use cases</h4>
-              <ul>
-                <li>Startups</li>
-                <li>Enterprise</li>
-                <li>Government</li>
-                <li>Saas centre</li>
-                <li>Marketplaces</li>
-                <li>Ecommerce</li>
+            <h4 className='text-gray-500 font-medium mb-4'>Use cases</h4>
+              <ul className='flex flex-col gap-4 text-gray-700 font-medium'>
+                <li className='hover:animate-blink'>Startups</li>
+                <li className='hover:animate-blink'>Enterprise</li>
+                <li className='hover:animate-blink'>Government</li>
+                <li className='hover:animate-blink'>Saas centre</li>
+                <li className='hover:animate-blink'>Marketplaces</li>
+                <li className='hover:animate-blink'>Ecommerce</li>
               </ul>
             </div>
             <div>
-            <h4>Social</h4>
-              <ul>
-                <li>Twitter</li>
-                <li>Linkedin</li>
-                <li>Facebook</li>
-                <li>GitHub</li>
-                <li>AngelList</li>
-                <li>Dribble</li>
+            <h4 className='text-gray-500 font-medium mb-4'>Social</h4>
+              <ul className='flex flex-col gap-4 text-gray-700 font-medium'>
+                <li className='hover:animate-blink'>Twitter</li>
+                <li className='hover:animate-blink'>Linkedin</li>
+                <li className='hover:animate-blink'>Facebook</li>
+                <li className='hover:animate-blink'>GitHub</li>
+                <li className='hover:animate-blink'>AngelList</li>
+                <li className='hover:animate-blink'>Dribble</li>
               </ul>
             </div>
             <div>
-            <h4>Legal</h4>
-              <ul>
-                <li>Terms</li>
-                <li>Privacy</li>
-                <li>Cookies</li>
-                <li>Licenses</li>
-                <li>Settings</li>
-                <li>Contact</li>
+            <h4 className='text-gray-500 font-medium mb-4'>Legal</h4>
+              <ul className='flex flex-col gap-4 text-gray-700 font-medium'>
+                <li className='hover:animate-blink'>Terms</li>
+                <li className='hover:animate-blink'>Privacy</li>
+                <li className='hover:animate-blink'>Cookies</li>
+                <li className='hover:animate-blink'>Licenses</li>
+                <li className='hover:animate-blink'>Settings</li>
+                <li className='hover:animate-blink'>Contact</li>
               </ul>
+            </div>
             </div>
           </section>
-          <section className='flex'>
-            <div className='w-3/4'>
-            <p>Logo</p>
+          <section className='flex items-center w-11/12'>
+            <div className='w-1/2'>
+            <p><img className='ml-16' src={Logo} alt="" /></p>
 
             </div>
-            <p>{`${copyright} ${year} zysktechnologies. All rights reserved`} </p>
+            <p className='text-gray-500 font-medium w-full text-end'>{`${copyright} ${year} zysktechnologies. All rights reserved.`} </p>
           </section>
         </footer>
       
