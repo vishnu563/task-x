@@ -16,7 +16,7 @@ function App() {
           <section>
             <nav className='flex flex-row h-20 items-center bg-blue-400'>
               <div className='w-1/5'>LOGO ZYSK</div>
-              <ul className='flex flex-row w-3/4 space-x-20'>
+              <ul className='flex flex-row w-3/4 '>
                 <li>Home</li>
                 <li>Product</li>
                 <li>Resource</li>
@@ -39,7 +39,7 @@ function App() {
               <div className='demo-btn'>
               <FiPlayCircle />Demo
               </div>
-              <button className='btn-primary'>
+              <button className='btn-primary rounded-full'>
                 Sign up
               </button>
               </div>
@@ -99,7 +99,64 @@ function App() {
           </section>
 
           <section>
+            <div className='text-center mb-28'>
+                <h2 className='font-bold text-2xl' >Frequently asked questions</h2>
+                <p>Everything you need to know about the product and billing.</p>
+            </div>
+            <div className='flex justify-center mt-2 mb-8 text-left'>
+            <div className='flex flex-col'>
+              <details className='mb-16'>
+                <summary className="cursor-pointer list-none transition duration-300 ease-in-out font-bold group-open:font-bold group-open:text-blue-600">
+                  Is ther a free trail available?
+                </summary>
+                <p className="transition duration-300 ease-in-out">Yes, you can try us for free 30 days. If tou want, we'll provide you with a free, personalized 30- minute onboarding call to get you up and running as soon as possible.</p>
+              </details>
+              <hr />
+              <details className='mb-16'>
+                <summary className="cursor-pointer list-none transition duration-300 ease-in-out font-bold group-open:font-bold group-open:text-blue-600">
+                  Can I change my plan later?
+                </summary>
+                <p className="transition duration-300 ease-in-out">Yes, you can try us for free 30 days. If tou want, we'll provide you with a free, personalized 30- minute onboarding call to get you up and running as soon as possible.</p>
+              </details>
+              <hr />
+              <details className='mb-16'>
+                <summary className="cursor-pointer list-none transition duration-300 ease-in-out font-bold group-open:font-bold group-open:text-blue-600">
+                  What is your cancellation policy?
+                </summary>
+                <p className="transition duration-300 ease-in-out">Yes, you can try us for free 30 days. If tou want, we'll provide you with a free, personalized 30- minute onboarding call to get you up and running as soon as possible.</p>
+              </details>
+              <hr />
+              <details className='mb-16'>
+                <summary className="cursor-pointer list-none transition duration-300 ease-in-out font-bold group-open:font-bold group-open:text-blue-600">
+                  Can other info be added to an invoice?
+                </summary>
+                <p className="transition duration-300 ease-in-out">Yes, you can try us for free 30 days. If tou want, we'll provide you with a free, personalized 30- minute onboarding call to get you up and running as soon as possible.</p>
+              </details>
+              <hr />
+              <details className='mb-16'>
+                <summary className="cursor-pointer list-none transition duration-300 ease-in-out font-bold group-open:font-bold group-open:text-blue-600">
+                  How does billing work?
+                </summary>
+                <p className="transition duration-300 ease-in-out">Yes, you can try us for free 30 days. If tou want, we'll provide you with a free, personalized 30- minute onboarding call to get you up and running as soon as possible.</p>
+              </details>
+              <hr />
+              <details className='mb-16'>
+                <summary className="cursor-pointer list-none transition duration-300 ease-in-out font-bold group-open:font-bold group-open:text-blue-600">
+                  How do I change my account email?
+                </summary>
+                <p className="transition duration-300 ease-in-out">Yes, you can try us for free 30 days. If tou want, we'll provide you with a free, personalized 30- minute onboarding call to get you up and running as soon as possible.</p>
+              </details>
+            </div>
+            </div>
+            <div className='flex justify-center mt-2 mb-8'>
+            <div className='flex flex-col items-center text-center w-4/5 space-y-6 bg-gray-100 pt-8 pb-8 rounded-lg'>
+              <img src="" alt="logo" />
+              <h2 className='font-bold'>Still have questions?</h2>
+              <p>Cant't find the answer you're looking for? Please chat to our friendly team.</p>
+              <button className='rounded-lg btn-primary'>Get in touch</button>
+            </div>
 
+            </div>
           </section>
         </header>
 
