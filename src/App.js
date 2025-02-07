@@ -67,30 +67,30 @@ function App() {
       <main>
         <header>
           <section>
-            <nav className='flex flex-row h-20 items-center'>
-              <div className='flex justify-center w-1/6'><img src={Logo} alt="logo" /></div>
-              <ul className='flex flex-row w-3/4 space-x-5'>
+            <nav className='flex flex-row h-20 items-center sm:flex-col sm:justify-center sm:items-start sm:h-14'>
+              <div className='flex justify-center w-1/6 sm:ml-5'><img src={Logo} alt="logo" /></div>
+              <ul className='flex flex-row w-3/4 space-x-5 font-semibold text-gray-600 sm:hidden'>
                 <li>Home</li>
                 <li>Product</li>
                 <li>Resource</li>
                 <li>Pricing</li>
               </ul>
-              <div><img src={userAvatar} alt="User Logo" /></div>
+              <div className='sm:hidden'><img src={userAvatar} alt="User Logo" /></div>
             </nav>
             <hr />
             <div className='flex flex-col gap-10 items-center mt-28'>
-              <div className='flex flex-row text-red-600 font-semibold bg-red-50 space-x-6 border border-gray-300 p-0.5 pr-3 rounded-full items-center'>
-                <div className='border bg-slate-50 border-gray-300 rounded-full px-3'>
+              <div className='flex flex-row text-red-600 font-semibold bg-red-50 space-x-6 border border-gray-300 p-0.5 pr-3 rounded-full items-center sm:text-xs sm:w-fit sm:space-x-1 sm:border-purple-300'>
+                <div className='border bg-slate-50 border-gray-300 rounded-full px-3 sm:text-nowrap sm:px-1 sm:border-purple-300'>
                   New feature
                 </div>
-                <div className='flex items-center gap-2'>
-                  Check out the team dashboard <FaArrowRight />
+                <div className='flex items-center gap-2 sm:text-nowrap'>
+                  Check out the team dashboard <FaArrowRight className=' sm:fill-purple-600' />
                 </div>
               </div>
-              <h1 className='font-bold text-5xl'>Beautiful analytics to grow smater</h1>
-              <p className=' text-center text-2xl w-4/6 text-gray-600'>Powerful, self-serve product and growth analytics to help you convert, engage, and retain more users. Trusted by over 4000 startups.</p>
-              <div className='flex flex-row space-x-8'>
-              <div className='demo-btn rounded-full'>
+              <h1 className='font-bold text-center text-5xl'>Beautiful analytics to grow smater</h1>
+              <p className=' text-center text-2xl w-4/6 text-gray-600 sm:text-xl sm:w-full'>Powerful, self-serve product and growth analytics to help you convert, engage, and retain more users. Trusted by over 4000 startups.</p>
+              <div className='flex flex-row items-center justify-center space-x-8 sm:flex-col-reverse sm:space-x-0'>
+              <div className='demo-btn rounded-full sm:mt-5 sm:flex'>
               <FiPlayCircle />Demo
               </div>
               <button className='btn-primary rounded-full'>
@@ -98,14 +98,14 @@ function App() {
               </button>
               </div>
             </div>
-            <div className='flex justify-center m-14 border-8 border-black rounded-t-3xl'>
-            <img src={mainImg} alt="Chat botImg" className='object-cover object-top rounded-t-2xl h-[34rem] w-full' />
+            <div className='flex justify-center m-14 border-8 border-black rounded-t-3xl sm:border-2 sm:justify-normal sm:rounded-lg '>
+            <img src={mainImg} alt="Chat botImg" className='object-cover object-top rounded-t-2xl h-[34rem] w-full sm:h-full sm:rounded-lg' />
             </div>
           </section>
 
           <section className='flex flex-col'>
-            <p className='text-center  text-gray-600 mt-10'>Join 4000+ companies already growing</p>
-            <div className='grid grid-cols-6 items-center gap-10 m-12 object-cover '>
+            <p className='text-center  text-gray-600 mt-10 sm:mt-5'>Join 4000+ companies already growing</p>
+            <div className='grid grid-cols-6 items-center gap-10 m-12 object-cover sm:grid-cols-2 '>
               <img src={companyLogo3} alt="Company Logo" />
               <img src={companyLogo4} alt="Company Logo" />
               <img src={companyLogo5} alt="Company Logo" />
@@ -113,19 +113,19 @@ function App() {
               <img src={companyLogo1} alt="Company Logo" />
               <img src={companyLogo2} alt="Company Logo" />
             </div>
-            <div className='flex justify-center mt-12'>
-            <hr className='w-5/6' />
+            <div className='flex justify-center mt-12 sm:mt-4'>
+            <hr className='w-5/6'  />
             </div>
           </section>
 
           <section>
-            <div className='flex flex-col gap-6 items-center mt-28 mb-28'>
+            <div className='flex flex-col gap-6 items-center mt-28 mb-28 sm:mt-10 sm:mb-10'>
             <h4 className='text-red-500 font-bold'>Features</h4>
-            <h2 className='font-semibold text-5xl'>Analytics that feels like it's from the future</h2>
+            <h2 className='font-semibold text-5xl sm:text-3xl sm:text-center'>Analytics that feels like it's from the future</h2>
             <p className=' text-center text-2xl w-4/6  text-gray-600'>Powerful, self-serve product and growth analytics to help you convert, engage, and retain more users. Trusted by over 4000 startups.</p>
 
             </div>
-            <div className='grid grid-cols-3 items-center text-center gap-10 m-14'>
+            <div className='grid grid-cols-3 items-center text-center gap-10 m-14 sm:flex flex-col'>
               <div className='flex flex-col items-center'>
                 <div className='border border-gray-200 w-fit p-3 rounded-xl'>
                 <IoChatbubblesOutline size={25} />
@@ -175,7 +175,7 @@ function App() {
               <div className='object-cover mt-20 mb-10'>
               <img src={companyLogo6} alt="Companylogo" />
               </div>
-              <h1 className='font-bold text-5xl text-center w-5/6 mb-10'>We've been using Untitled to kick start every new project and can't imagine working without it.</h1>
+              <h1 className='font-bold text-5xl text-center w-5/6 mb-10 sm:text-3xl'>We've been using Untitled to kick start every new project and can't imagine working without it.</h1>
               <p className='mb-8'><img src={cadience} alt="" /></p>
               <h4 className='font-semibold'>Candice Wu</h4>
               <p className=' text-gray-600'>Product Manager, Sisyphus</p>
@@ -192,20 +192,20 @@ function App() {
             <div className="flex justify-center mt-4 mb-8">
               <div className="w-4/5 text-left">
                 {faqs.map((faq, index) => (
-                  <div key={index} className="flex flex-col items-center">
-                    <details className="w-2/4 mb-8">
+                  <div key={index} className="flex items-center flex-col">
+                    <details className="w-2/4 mb-8 sm:w-full">
                       <summary className="mt-8 flex items-center cursor-pointer list-none transition duration-300 ease-in-out font-bold">
-                        <span className="w-4/5">{faq.question}</span>
+                        <span className="w-4/5 sm:w-11/12">{faq.question}</span>
                       </summary>
-                      <p className="mt-4 transition duration-300 ease-in-out">{faq.answer}</p>
+                      <p className="mt-4 items-center transition duration-300 ease-in-out">{faq.answer}</p>
                     </details>
-                    {index !== faqs.length - 1 && <hr className="w-2/4" />}
+                    {index !== faqs.length - 1 && <hr className="w-2/4 sm:w-full" />}
                   </div>
                 ))}
               </div>
             </div>
             <div className='flex justify-center mt-2 mb-8'>
-            <div className='flex flex-col items-center text-center w-4/5 space-y-6 bg-gray-100 pt-8 pb-8 rounded-lg'>
+            <div className='flex flex-col items-center text-center w-4/5 space-y-6 bg-gray-100 pt-8 pb-8 rounded-lg sm:justify-center'>
               <img src={avatharGroup} alt="logo" />
               <h2 className='font-bold'>Still have questions?</h2>
               <p>Cant't find the answer you're looking for? Please chat to our friendly team.</p>
@@ -216,7 +216,7 @@ function App() {
           </section>
 
           <section className='flex flex-col m-10'>
-            <div className='flex flex-row mb-20'>
+            <div className='flex flex-row mb-20 sm:flex-col' >
                 <div className='w-4/5 space-y-8'>
                   <h3 className='text-orange-600 font-bold'>
                     Our blog
@@ -229,19 +229,19 @@ function App() {
                   </p>
                 </div>
                 <div>
-                  <button className='btn-primary rounded-lg'>View all posts</button>
+                  <button className='btn-primary rounded-lg sm:mt-10'>View all posts</button>
                 </div>
             </div>
 
-            <div className='flex items-center'>
-              <div className='space-y-4'>
+            <div className='flex items-center gap-10 sm:flex-col sm:gap-0'>
+              <div className='space-y-4 sm:mb-10'>
                 <img src={Design} alt="design" />
                 <h3 className='text-orange-600 font-bold'>Design</h3>
                 <div className='flex flex-row items-center'>
-                <h1 className='font-bold text-2xl w-5/6'>UX review presentations</h1>
+                <h1 className='font-bold text-2xl w-5/6 sm:w-fit'>UX review presentations</h1>
                 <MdArrowOutward size={25} />
                 </div>
-                <p className='text-gray-600'>How do you create compelling presentations that wow your colleagues and impress your managers?</p>
+                <p className='text-gray-600 '>How do you create compelling presentations that wow your colleagues and impress your managers?</p>
                 <div className='flex items-center gap-4'>
                   <p><img src={userAvatar} alt="Olivia Rhye" /></p>
                   <div>
@@ -250,11 +250,11 @@ function App() {
                   </div>
                 </div>
               </div>
-              <div className='space-y-4'>
+              <div className='space-y-4 sm:mb-10'>
                 <img src={Product} alt="product" />
                 <h3 className='text-orange-600 font-bold'>Product</h3>
                 <div className='flex flex-row items-center'>
-                <h1 className='font-bold text-2xl w-5/6'>Migrating to Linear 101</h1>
+                <h1 className='font-bold text-2xl w-5/6 sm:w-fit'>Migrating to Linear 101</h1>
                 <MdArrowOutward size={25} />
                 </div>
                 <p className='text-gray-600'>Linear helps streamline software projects, sprints, tasks, and bug tracking. Here's how to get started.</p>
@@ -270,7 +270,7 @@ function App() {
                 <img src={SWE} alt="software" />
                 <h3 className='text-orange-600 font-bold'>Software Engineering</h3>
                 <div className='flex flex-row items-center'>
-                <h1 className='font-bold text-2xl w-5/6'>Building your API stack</h1>
+                <h1 className='font-bold text-2xl w-5/6 sm:w-fit'>Building your API stack</h1>
                 <MdArrowOutward size={25} />
                 </div>
                 <p className='text-gray-600'>The rise of RESTful APIs has been met by a rise in tools for creating, testing, and managing them.</p>
@@ -286,11 +286,11 @@ function App() {
           </section>
 
           <section className='flex flex-col items-center gap-6 mt-32 mb-20  bg-gray-100 py-24'>
-            <h1 className='font-bold text-4xl'>Start your free trail</h1>
-            <p className='text-gray-600 text-lg'>Join our 4,000+ startups already growing with Untitled.</p>
-            <div className='space-x-10 flex'>
-              <button className='demo-btn rounded-lg bg-white text-gray-600'>Learn more</button>
-              <button className='btn-primary rounded-lg'>Get started</button>
+            <h1 className='font-bold text-4xl text-center'>Start your free trail</h1>
+            <p className='text-gray-600 text-lg text-center'>Join our 4,000+ startups already growing with Untitled.</p>
+            <div className='space-x-10 flex sm:flex-col-reverse sm:items-center sm:space-x-0'>
+              <button className='demo-btn rounded-lg bg-white text-gray-600 sm:mt-4'>Learn more</button>
+              <button className='btn-primary rounded-lg '>Get started</button>
             </div>
           </section>
         </header>
@@ -298,7 +298,7 @@ function App() {
 
         <footer className='mb-10 cursor-default'>
           <section className='flex justify-center' >
-            <div className='grid grid-cols-6 gap-24 mb-10' >
+            <div className='grid grid-cols-6 gap-12 mb-10 sm:grid-cols-2 sm:items-center sm:gap-8' >
             <div>
               <h4 className='text-gray-500 font-medium mb-4'>Product</h4>
               <ul className='flex flex-col gap-4 text-gray-700 font-medium'>
@@ -370,12 +370,12 @@ function App() {
             </div>
             </div>
           </section>
-          <section className='flex items-center w-11/12'>
-            <div className='w-1/2'>
-            <p><img className='ml-16' src={Logo} alt="" /></p>
+          <section className='flex items-center w-11/12 sm:flex-col sm:w-full sm:items-start'>
+            <div className='w-1/2 mb-4'>
+            <p><img className='ml-16 sm:ml-5' src={Logo} alt="company logo" /></p>
 
             </div>
-            <p className='text-gray-500 font-medium w-full text-end'>{`${copyright} ${year} zysktechnologies. All rights reserved.`} </p>
+            <p className='text-gray-500 font-medium w-full text-end sm:text-start sm:ml-5 sm:w-fit'>{`${copyright} ${year} zysktechnologies. All rights reserved.`} </p>
           </section>
         </footer>
       
