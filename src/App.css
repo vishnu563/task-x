@@ -1,5 +1,5 @@
 .demo-btn{
-  @apply flex flex-row border border-gray-400 px-4 py-2 rounded-full font-bold gap-3 items-center cursor-default;
+  @apply flex flex-row border border-gray-400 px-4 py-2 rounded-full font-bold gap-3 items-center cursor-default hover:bg-gray-100 transition duration-300;
 }
 .btn-primary {
   @apply bg-red-500 hover:bg-purple-500 text-white font-bold py-2 px-4 items-center transition duration-300 cursor-default;
