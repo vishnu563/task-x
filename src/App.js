@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState } from 'react';
+import React, { use, useState } from 'react';
 import mainImg from "./images/image1.png"
 import companyLogo from "./images/company logo.png"
 import Logo from "./images/logo.png"
@@ -19,14 +19,15 @@ import Product from "./images/Product.png"
 import Design from "./images/Design.png"
 
 
-import { FiPlayCircle, FiCommand } from "react-icons/fi";
-import { FaArrowRight, FaAngleDown } from "react-icons/fa6";
-import { IoChatbubblesOutline } from "react-icons/io5";
+import { LiaBuffer } from "react-icons/lia";
+import { FiPlayCircle, FiCommand, FiUser, FiUsers, FiUserPlus, FiBox, } from "react-icons/fi";
+import { FaArrowRight, FaAngleDown, FaRegCircleQuestion } from "react-icons/fa6";
+import { IoChatbubblesOutline,IoSettingsOutline } from "react-icons/io5";
 import { BsLightningCharge,BsStars } from "react-icons/bs";
 import { FaRegShareSquare } from "react-icons/fa";
 import { HiOutlineX } from "react-icons/hi";
-import { RiChatSmileAiLine } from "react-icons/ri";
-import { LuMessageCircleHeart } from "react-icons/lu";
+import { RiChatSmileAiLine,RiHome6Line,RiChatSmile2Line } from "react-icons/ri";
+import { LuMessageCircleHeart, LuLogOut } from "react-icons/lu";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { MdArrowOutward } from "react-icons/md";
 import { BiDockBottom } from "react-icons/bi";
@@ -64,18 +65,21 @@ function App() {
   ];
   const [isProductOpen, setIsProductOpen] = useState(false);
   const [isResourceOpen, setIsResourceOpen] = useState(false);
+  const [isProfileOpen, setIsProfileOpen] = useState(false);
   
   const [isOpen, setIsOpen] = useState(false);
   
   const toggle = () => {
     setIsOpen(!isOpen);
-
   }
   const toggleProduct = () => {
     setIsProductOpen(!isProductOpen);
   }
   const toggleResource = () => {
     setIsResourceOpen(!isResourceOpen);
+  }
+  const toggleProfile = () => {
+    setIsProfileOpen(!isProfileOpen);
   }
 
   return (
@@ -97,13 +101,13 @@ function App() {
                 <li className='cursor-pointer flex items-center gap-3' onClick={toggleResource}>Resource <FaAngleDown /></li>
                 <li>Pricing</li>
               </ul>
-              <div className='cursor-pointer'>
+              <div onClick={toggleProfile} className='cursor-pointer'>
                 <img className='sm:hidden' src={userAvatar} alt="User Logo" />
               </div>
             </nav>
             <hr className='sm:w-full'/>
-            {isProductOpen?<div>
-                  <div className='flex ml-20 -mt-4 z-10 border border-solid border-1 border-gray-300 shadow-xl rounded-lg absolute w-1/2'>
+            {isProductOpen?<div className='sm:hidden'>
+                  <div className='flex ml-10 -mt-4 z-10 border border-solid border-1 border-gray-300 shadow-xl rounded-lg absolute w-1/2'>
                     <div className='w-1/2 bg-slate-50 p-5 rounded-lg'>
                       <div className='flex flex-row hover:bg-slate-100 mt-5 mb-4'>
                       <BiDockBottom size={40} color='purple' className='mr-5'/>
@@ -137,8 +141,8 @@ function App() {
                     </div>
                   </div>
                 </div>:<div/>}
-            {isResourceOpen?<div>
-                  <div className='flex ml-60 -mt-4 z-10 border border-solid border-1 border-gray-300 shadow-xl rounded-lg absolute w-1/2'>
+            {isResourceOpen?<div className='sm:hidden'>
+                  <div className='flex ml-48 -mt-4 z-10 border border-solid border-1 border-gray-300 shadow-xl rounded-lg absolute w-1/2'>
                     <div className='w-1/2 bg-slate-50 p-5 rounded-lg'>
                       <div className='flex flex-row hover:bg-slate-100 mt-5 mb-4'>
                       <BiDockBottom size={40} color='purple' className='mr-5'/>
@@ -168,10 +172,91 @@ function App() {
                     </div>
                       <h2 className='text-center font-bold text-xl'>We've just released an update!</h2>
                       <p className='text-center m-2 text-gray-500 '>Checkout the all new dashboard view. Pages now load faster.</p>
-                      <ul className='flex ml-6 gap-5 mb-5 font-bold'><li className='text-gray-600 hover:text-gray-700 hover:animate-blink'>Dismiss</li><li className='text-purple-600 hover:text-purple-700 hover:animate-blink'>Changelog</li></ul>
+                      <ul className='flex ml-6 gap-5 mb-5 font-bold'><li className='text-gray-600 hover:text-gray-700'>Dismiss</li><li className='text-purple-600 hover:text-purple-700'>Changelog</li></ul>
                     </div>
                   </div>
                 </div>:<div/>}
+              {isProfileOpen?<div className='flex justify-end -mt-4 mr-3 sm:hidden'>
+                  <div className='border border-solid border-1 border-gray-300 rounded-lg p-2 bg-slate-50 absolute shadow-lg'>
+                  <div className='flex items-center mb-3'>
+                  <figure>
+                  <img className='' src={userAvatar} alt="User Logo" />
+                  <div className='bg-green-500 w-3 h-3 rounded-full absolute ml-7 z-10 -mt-3'></div>
+                  </figure>
+                  <div className='w-3/4 ml-5'>
+                    <h2 className='font-bold text-gray-700'>Olivia Rhye</h2>
+                    <p className='text-gray-600'>olivia@untitledui.com</p>
+                  </div>
+                  </div>
+                  <hr />
+                  <div className='flex flex-col gap-2'>
+                    <div className='flex items-center rounded-lg p-2 hover:bg-slate-300'>
+                      <FiUser />
+                      <p className='w-11/12 ml-2 font-medium text-gray-600'>View Profile</p>
+                      <p className='flex items-center text-xs text-gray-500'><FiCommand />P</p>
+                    </div>
+                    <div className='flex items-center rounded-lg p-2 hover:bg-slate-300'>
+                      <IoSettingsOutline />
+                      <p className='w-11/12 ml-2 font-medium text-gray-600'>Setting</p>
+                      <p className='flex items-center text-xs text-gray-500'><FiCommand />S</p>
+                    </div>
+                    <div className='flex items-center rounded-lg p-2 hover:bg-slate-300'>
+                      <BsLightningCharge />
+                      <p className='w-11/12 ml-2 font-medium text-gray-600'>Keyboard shortcuts</p>
+                      <p className='flex items-center text-xs text-gray-500'><FiCommand />?</p>
+                    </div>
+                  </div>
+                  <hr />
+                  <div className='flex flex-col gap-2'>
+                    <div className='flex items-center rounded-lg p-2 hover:bg-slate-300'>
+                      <RiHome6Line />
+                      <p className='w-11/12 ml-2 font-medium text-gray-600'>Company profile</p>
+                      <p className='flex items-center text-xs text-gray-500'><FiCommand />C</p>
+                    </div>
+                    <div className='flex items-center rounded-lg p-2 hover:bg-slate-300'>
+                      <FiUsers />
+                      <p className='w-11/12 ml-2 font-medium text-gray-600'>Team</p>
+                      <p className='flex items-center text-xs text-gray-500'><FiCommand />T</p>
+                    </div>
+                    <div className='flex items-center rounded-lg p-2 hover:bg-slate-300'>
+                      <FiUserPlus />
+                      <p className='w-11/12 ml-2 font-medium text-gray-600'>Invite colleagues</p>
+                      <p className='flex items-center text-xs text-gray-500'><FiCommand />I</p>
+                    </div>
+                  </div>
+                  <hr />
+                  <div className='flex flex-col gap-2'>
+                    <div className='flex items-center rounded-lg p-2 hover:bg-slate-300'>
+                      <LiaBuffer />
+                      <p className='w-11/12 ml-2 font-medium text-gray-600'>Changelog</p>
+                      <p className='flex items-center text-xs text-gray-500'><FiCommand />K</p>
+                    </div>
+                    <div className='flex items-center rounded-lg p-2 hover:bg-slate-300'>
+                      <RiChatSmile2Line />
+                      <p className='w-11/12 ml-2 font-medium text-gray-600'>Slack Community</p>
+                      <p className='flex items-center text-xs text-gray-500'><FiCommand />Y</p>
+                    </div>
+                    <div className='flex items-center rounded-lg p-2 hover:bg-slate-300'>
+                      <FaRegCircleQuestion />
+                      <p className='w-11/12 ml-2 font-medium text-gray-600'>Support</p>
+                      <p className='flex items-center text-xs text-gray-500'><FiCommand />/</p>
+                    </div>
+                    <div className='flex items-center rounded-lg p-2 hover:bg-slate-300'>
+                      <FiBox />
+                      <p className='w-11/12 ml-2 font-medium text-gray-600'>API</p>
+                      <p className='flex items-center text-xs text-gray-500'><FiCommand />A</p>
+                    </div>
+                  </div>
+                  <hr />
+                  <div className='flex flex-col gap-2'>
+                    <div className='flex items-center rounded-lg p-2 hover:bg-slate-300'> 
+                      <LuLogOut />
+                      <p className='w-11/12 ml-2 font-medium text-gray-600'>Logout</p>
+                      <p className='flex items-center text-xs text-gray-500'><FiCommand />Q</p>
+                    </div>
+                  </div>
+                  </div>
+              </div>:<div/>}  
             <div className='flex flex-col gap-10 items-center mt-28'>
               <div className='flex flex-row text-red-600 font-semibold bg-red-50 space-x-6 border border-gray-300 p-0.5 pr-3 rounded-full items-center sm:text-xs sm:w-fit sm:space-x-1 sm:border-purple-300'>
                 <div className='border bg-slate-50 border-gray-300 rounded-full px-3 sm:text-nowrap sm:px-1 sm:border-purple-300'>
