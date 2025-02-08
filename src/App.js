@@ -176,7 +176,7 @@ function App() {
                     </div>
                   </div>
                 </div>:<div/>}
-              {isProfileOpen?<div className='flex justify-end -mt-4 mr-3 sm:hidden'>
+              {isProfileOpen || isOpen ?<div className='flex justify-end -mt-4 mr-3'>
                   <div className='border border-solid border-1 border-gray-300 rounded-lg p-2 bg-slate-50 absolute shadow-lg'>
                   <div className='flex items-center mb-3'>
                   <figure>
@@ -193,17 +193,17 @@ function App() {
                     <div className='flex items-center rounded-lg p-2 hover:bg-slate-300'>
                       <FiUser />
                       <p className='w-11/12 ml-2 font-medium text-gray-600'>View Profile</p>
-                      <p className='flex items-center text-xs text-gray-500'><FiCommand />P</p>
+                      <p className='sm:hidden flex items-center text-xs text-gray-500'><FiCommand />P</p>
                     </div>
                     <div className='flex items-center rounded-lg p-2 hover:bg-slate-300'>
                       <IoSettingsOutline />
                       <p className='w-11/12 ml-2 font-medium text-gray-600'>Setting</p>
-                      <p className='flex items-center text-xs text-gray-500'><FiCommand />S</p>
+                      <p className='sm:hidden flex items-center text-xs text-gray-500'><FiCommand />S</p>
                     </div>
                     <div className='flex items-center rounded-lg p-2 hover:bg-slate-300'>
                       <BsLightningCharge />
                       <p className='w-11/12 ml-2 font-medium text-gray-600'>Keyboard shortcuts</p>
-                      <p className='flex items-center text-xs text-gray-500'><FiCommand />?</p>
+                      <p className='sm:hidden flex items-center text-xs text-gray-500'><FiCommand />?</p>
                     </div>
                   </div>
                   <hr />
@@ -211,17 +211,17 @@ function App() {
                     <div className='flex items-center rounded-lg p-2 hover:bg-slate-300'>
                       <RiHome6Line />
                       <p className='w-11/12 ml-2 font-medium text-gray-600'>Company profile</p>
-                      <p className='flex items-center text-xs text-gray-500'><FiCommand />C</p>
+                      <p className='sm:hidden flex items-center text-xs text-gray-500'><FiCommand />C</p>
                     </div>
                     <div className='flex items-center rounded-lg p-2 hover:bg-slate-300'>
                       <FiUsers />
                       <p className='w-11/12 ml-2 font-medium text-gray-600'>Team</p>
-                      <p className='flex items-center text-xs text-gray-500'><FiCommand />T</p>
+                      <p className='sm:hidden flex items-center text-xs text-gray-500'><FiCommand />T</p>
                     </div>
                     <div className='flex items-center rounded-lg p-2 hover:bg-slate-300'>
                       <FiUserPlus />
                       <p className='w-11/12 ml-2 font-medium text-gray-600'>Invite colleagues</p>
-                      <p className='flex items-center text-xs text-gray-500'><FiCommand />I</p>
+                      <p className='sm:hidden flex items-center text-xs text-gray-500'><FiCommand />I</p>
                     </div>
                   </div>
                   <hr />
@@ -229,22 +229,22 @@ function App() {
                     <div className='flex items-center rounded-lg p-2 hover:bg-slate-300'>
                       <LiaBuffer />
                       <p className='w-11/12 ml-2 font-medium text-gray-600'>Changelog</p>
-                      <p className='flex items-center text-xs text-gray-500'><FiCommand />K</p>
+                      <p className='sm:hidden flex items-center text-xs text-gray-500'><FiCommand />K</p>
                     </div>
                     <div className='flex items-center rounded-lg p-2 hover:bg-slate-300'>
                       <RiChatSmile2Line />
                       <p className='w-11/12 ml-2 font-medium text-gray-600'>Slack Community</p>
-                      <p className='flex items-center text-xs text-gray-500'><FiCommand />Y</p>
+                      <p className='sm:hidden flex items-center text-xs text-gray-500'><FiCommand />Y</p>
                     </div>
                     <div className='flex items-center rounded-lg p-2 hover:bg-slate-300'>
                       <FaRegCircleQuestion />
                       <p className='w-11/12 ml-2 font-medium text-gray-600'>Support</p>
-                      <p className='flex items-center text-xs text-gray-500'><FiCommand />/</p>
+                      <p className='sm:hidden flex items-center text-xs text-gray-500'><FiCommand />/</p>
                     </div>
                     <div className='flex items-center rounded-lg p-2 hover:bg-slate-300'>
                       <FiBox />
                       <p className='w-11/12 ml-2 font-medium text-gray-600'>API</p>
-                      <p className='flex items-center text-xs text-gray-500'><FiCommand />A</p>
+                      <p className='sm:hidden flex items-center text-xs text-gray-500'><FiCommand />A</p>
                     </div>
                   </div>
                   <hr />
@@ -252,7 +252,7 @@ function App() {
                     <div className='flex items-center rounded-lg p-2 hover:bg-slate-300'> 
                       <LuLogOut />
                       <p className='w-11/12 ml-2 font-medium text-gray-600'>Logout</p>
-                      <p className='flex items-center text-xs text-gray-500'><FiCommand />Q</p>
+                      <p className='sm:hidden flex items-center text-xs text-gray-500'><FiCommand />Q</p>
                     </div>
                   </div>
                   </div>
