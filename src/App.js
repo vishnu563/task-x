@@ -20,7 +20,7 @@ import Design from "./images/Design.png"
 
 
 import { FiPlayCircle, FiCommand } from "react-icons/fi";
-import { FaArrowRight } from "react-icons/fa6";
+import { FaArrowRight, FaAngleDown } from "react-icons/fa6";
 import { IoChatbubblesOutline } from "react-icons/io5";
 import { BsLightningCharge } from "react-icons/bs";
 import { FaRegShareSquare } from "react-icons/fa";
@@ -71,11 +71,11 @@ function App() {
               <div className='flex justify-center w-1/6 sm:ml-5'><img src={Logo} alt="logo" /></div>
               <ul className='flex flex-row w-3/4 space-x-5 font-semibold text-gray-600 sm:hidden'>
                 <li>Home</li>
-                <li>Product</li>
-                <li>Resource</li>
+                <li className='cursor-pointer flex items-center gap-3'>Product <FaAngleDown /></li>
+                <li className='cursor-pointer flex items-center gap-3'>Resource <FaAngleDown /></li>
                 <li>Pricing</li>
               </ul>
-              <div className='sm:hidden'><img src={userAvatar} alt="User Logo" /></div>
+              <div className='cursor-pointer sm:hidden'><img src={userAvatar} alt="User Logo" /></div>
             </nav>
             <hr />
             <div className='flex flex-col gap-10 items-center mt-28'>
