@@ -22,13 +22,14 @@ import Design from "./images/Design.png"
 import { FiPlayCircle, FiCommand } from "react-icons/fi";
 import { FaArrowRight, FaAngleDown } from "react-icons/fa6";
 import { IoChatbubblesOutline } from "react-icons/io5";
-import { BsLightningCharge } from "react-icons/bs";
+import { BsLightningCharge,BsStars } from "react-icons/bs";
 import { FaRegShareSquare } from "react-icons/fa";
 import { HiOutlineX } from "react-icons/hi";
 import { RiChatSmileAiLine } from "react-icons/ri";
 import { LuMessageCircleHeart } from "react-icons/lu";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { MdArrowOutward } from "react-icons/md";
+import { BiDockBottom } from "react-icons/bi";
 
 
 function App() {
@@ -61,12 +62,22 @@ function App() {
       answer: "Yes, you can try us for free for 30 days. If you want, we'll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible." 
     },
   ];
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isProductOpen, setIsProductOpen] = useState(false);
+  const [isResourceOpen, setIsResourceOpen] = useState(false);
   
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+  const [isOpen, setIsOpen] = useState(false);
+  
+  const toggle = () => {
+    setIsOpen(!isOpen);
 
-}
+  }
+  const toggleProduct = () => {
+    setIsProductOpen(!isProductOpen);
+  }
+  const toggleResource = () => {
+    setIsResourceOpen(!isResourceOpen);
+  }
+
   return (
     <div className="App">
       <main>
@@ -76,14 +87,14 @@ function App() {
               <div className='flex justify-center w-1/6 sm:w-full sm:justify-evenly sm:items-center'>
               <img className src={Logo} alt="logo" />
               <div className='w-2/5 bg md:hidden lg:hidden xl:hidden 2xl:hidden'></div>
-              <div className='cursor-pointer md:hidden lg:hidden xl:hidden 2xl:hidden p-2.5 hover:rounded-md hover:bg-gray-100 transition duration-400' onClick={toggleMenu}>
-              {isMenuOpen ? <HiOutlineX/> : <RxHamburgerMenu/>}
+              <div className='cursor-pointer md:hidden lg:hidden xl:hidden 2xl:hidden p-2.5 hover:rounded-md hover:bg-gray-100 transition duration-400' onClick={toggle}>
+              {isOpen ? <HiOutlineX/> : <RxHamburgerMenu/>}
               </div>
               </div>
               <ul className='flex flex-row w-3/4 space-x-5 font-semibold text-gray-600 sm:hidden'>
                 <li>Home</li>
-                <li className='cursor-pointer flex items-center gap-3'>Product <FaAngleDown /></li>
-                <li className='cursor-pointer flex items-center gap-3'>Resource <FaAngleDown /></li>
+                <li className='cursor-pointer flex items-center gap-3' onClick={toggleProduct}>Product <FaAngleDown /></li>
+                <li className='cursor-pointer flex items-center gap-3' onClick={toggleResource}>Resource <FaAngleDown /></li>
                 <li>Pricing</li>
               </ul>
               <div className='cursor-pointer'>
@@ -91,6 +102,76 @@ function App() {
               </div>
             </nav>
             <hr className='sm:w-full'/>
+            {isProductOpen?<div>
+                  <div className='flex ml-20 -mt-4 z-10 border border-solid border-1 border-gray-300 shadow-xl rounded-lg absolute w-1/2'>
+                    <div className='w-1/2 bg-slate-50 p-5 rounded-lg'>
+                      <div className='flex flex-row hover:bg-slate-100 mt-5 mb-4'>
+                      <BiDockBottom size={40} color='purple' className='mr-5'/>
+                        <div>
+                          <h2 className='font-bold mt-1'>Blog</h2>
+                          <p className='text-gray-600'>The latest industry news, updates and info.</p>
+                        </div>
+                      </div>
+                      <div className='flex flex-row hover:bg-slate-100 mb-4' >
+                      <BsStars size={40} color='purple' className='mr-5'/>
+                        <div>
+                          <h2 className='font-bold mt-1'>Customer stories</h2>
+                          <p className='text-gray-600'>Learn how our customers are making big changes.</p>
+                        </div>
+                      </div>
+                      <div className='flex flex-row hover:bg-slate-100 rounded-lg mb-2'>
+                      <FiPlayCircle size={40} color='purple' className='mr-5'/>
+                        <div>
+                          <h2 className='font-bold mt-1'>Video tutorials</h2>
+                          <p className='text-gray-600'>Get up and running on new features and techniques.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className='bg-slate-100 w-1/2 rounded-lg flex flex-col'>
+                    <div className='m-6'>
+                    <img className='rounded-lg' src={Design} alt="Product" />
+                    </div>
+                      <h2 className='text-center font-bold text-xl'>We've just released an update!</h2>
+                      <p className='text-center m-2 text-gray-500 '>Checkout the all new dashboard view. Pages now load faster.</p>
+                      <ul className='flex ml-6 gap-5 mb-5 font-bold'><li className='text-gray-600 hover:text-gray-700 hover:animate-blink'>Dismiss</li><li className='text-purple-600 hover:text-purple-700 hover:animate-blink'>Changelog</li></ul>
+                    </div>
+                  </div>
+                </div>:<div/>}
+            {isResourceOpen?<div>
+                  <div className='flex ml-60 -mt-4 z-10 border border-solid border-1 border-gray-300 shadow-xl rounded-lg absolute w-1/2'>
+                    <div className='w-1/2 bg-slate-50 p-5 rounded-lg'>
+                      <div className='flex flex-row hover:bg-slate-100 mt-5 mb-4'>
+                      <BiDockBottom size={40} color='purple' className='mr-5'/>
+                        <div>
+                          <h2 className='font-bold mt-1'>Blog</h2>
+                          <p className='text-gray-600'>The latest industry news, updates and info.</p>
+                        </div>
+                      </div>
+                      <div className='flex flex-row hover:bg-slate-100 mb-4' >
+                      <BsStars size={40} color='purple' className='mr-5'/>
+                        <div>
+                          <h2 className='font-bold mt-1'>Customer stories</h2>
+                          <p className='text-gray-600'>Learn how our customers are making big changes.</p>
+                        </div>
+                      </div>
+                      <div className='flex flex-row hover:bg-slate-100 rounded-lg mb-2'>
+                      <FiPlayCircle size={40} color='purple' className='mr-5'/>
+                        <div>
+                          <h2 className='font-bold mt-1'>Video tutorials</h2>
+                          <p className='text-gray-600'>Get up and running on new features and techniques.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className='bg-slate-100 w-1/2 rounded-lg flex flex-col'>
+                    <div className='m-6'>
+                    <img className='rounded-lg' src={Design} alt="Product" />
+                    </div>
+                      <h2 className='text-center font-bold text-xl'>We've just released an update!</h2>
+                      <p className='text-center m-2 text-gray-500 '>Checkout the all new dashboard view. Pages now load faster.</p>
+                      <ul className='flex ml-6 gap-5 mb-5 font-bold'><li className='text-gray-600 hover:text-gray-700 hover:animate-blink'>Dismiss</li><li className='text-purple-600 hover:text-purple-700 hover:animate-blink'>Changelog</li></ul>
+                    </div>
+                  </div>
+                </div>:<div/>}
             <div className='flex flex-col gap-10 items-center mt-28'>
               <div className='flex flex-row text-red-600 font-semibold bg-red-50 space-x-6 border border-gray-300 p-0.5 pr-3 rounded-full items-center sm:text-xs sm:w-fit sm:space-x-1 sm:border-purple-300'>
                 <div className='border bg-slate-50 border-gray-300 rounded-full px-3 sm:text-nowrap sm:px-1 sm:border-purple-300'>
@@ -100,7 +181,7 @@ function App() {
                   Check out the team dashboard <FaArrowRight className=' sm:fill-purple-600' />
                 </div>
               </div>
-              <h1 className='font-bold text-center text-5xl'>Beautiful analytics to grow smater</h1>
+              <h1 className='font-bold text-center text-5xl'>Beautiful analytics to grow smarter</h1>
               <p className=' text-center text-2xl w-4/6 text-gray-600 sm:text-xl sm:w-full'>Powerful, self-serve product and growth analytics to help you convert, engage, and retain more users. Trusted by over 4000 startups.</p>
               <div className='flex flex-row items-center justify-center space-x-8 sm:flex-col-reverse sm:space-x-0'>
               <div className='demo-btn rounded-full sm:mt-5 sm:flex'>
@@ -208,7 +289,8 @@ function App() {
                   <div key={index} className="flex items-center flex-col">
                     <details className="w-2/4 mb-8 sm:w-full">
                       <summary className="mt-8 flex items-center cursor-pointer list-none transition duration-300 ease-in-out font-bold">
-                        <span className="w-4/5 sm:w-11/12">{faq.question}</span>
+                        <span className="flex items-center w-4/5 sm:w-11/12">{faq.question} </span>
+                        <div className='ml-8'><FaAngleDown /></div>
                       </summary>
                       <p className="mt-4 items-center transition duration-300 ease-in-out">{faq.answer}</p>
                     </details>
