@@ -1,5 +1,5 @@
 import './App.css';
-import React from 'react';
+import React, { useState } from 'react';
 import mainImg from "./images/image1.png"
 import companyLogo from "./images/company logo.png"
 import Logo from "./images/logo.png"
@@ -24,8 +24,10 @@ import { FaArrowRight, FaAngleDown } from "react-icons/fa6";
 import { IoChatbubblesOutline } from "react-icons/io5";
 import { BsLightningCharge } from "react-icons/bs";
 import { FaRegShareSquare } from "react-icons/fa";
+import { HiOutlineX } from "react-icons/hi";
 import { RiChatSmileAiLine } from "react-icons/ri";
 import { LuMessageCircleHeart } from "react-icons/lu";
+import { RxHamburgerMenu } from "react-icons/rx";
 import { MdArrowOutward } from "react-icons/md";
 
 
@@ -59,25 +61,36 @@ function App() {
       answer: "Yes, you can try us for free for 30 days. If you want, we'll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible." 
     },
   ];
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
 
-
-
+}
   return (
     <div className="App">
       <main>
         <header>
           <section>
             <nav className='flex flex-row h-20 items-center sm:flex-col sm:justify-center sm:items-start sm:h-14'>
-              <div className='flex justify-center w-1/6 sm:ml-5'><img src={Logo} alt="logo" /></div>
+              <div className='flex justify-center w-1/6 sm:w-full sm:justify-evenly sm:items-center'>
+              <img className src={Logo} alt="logo" />
+              <div className='w-2/5 bg md:hidden lg:hidden xl:hidden 2xl:hidden'></div>
+              <div className='cursor-pointer md:hidden lg:hidden xl:hidden 2xl:hidden p-2.5 hover:rounded-md hover:bg-gray-100 transition duration-400' onClick={toggleMenu}>
+              {isMenuOpen ? <HiOutlineX/> : <RxHamburgerMenu/>}
+              </div>
+              </div>
               <ul className='flex flex-row w-3/4 space-x-5 font-semibold text-gray-600 sm:hidden'>
                 <li>Home</li>
                 <li className='cursor-pointer flex items-center gap-3'>Product <FaAngleDown /></li>
                 <li className='cursor-pointer flex items-center gap-3'>Resource <FaAngleDown /></li>
                 <li>Pricing</li>
               </ul>
-              <div className='cursor-pointer sm:hidden'><img src={userAvatar} alt="User Logo" /></div>
+              <div className='cursor-pointer'>
+                <img className='sm:hidden' src={userAvatar} alt="User Logo" />
+              </div>
             </nav>
-            <hr />
+            <hr className='sm:w-full'/>
             <div className='flex flex-col gap-10 items-center mt-28'>
               <div className='flex flex-row text-red-600 font-semibold bg-red-50 space-x-6 border border-gray-300 p-0.5 pr-3 rounded-full items-center sm:text-xs sm:w-fit sm:space-x-1 sm:border-purple-300'>
                 <div className='border bg-slate-50 border-gray-300 rounded-full px-3 sm:text-nowrap sm:px-1 sm:border-purple-300'>
